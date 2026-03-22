@@ -1,28 +1,33 @@
 public class RotateArr {
-    public static void rotate(int[] arr, int k){
+    public static void main(String[] args) {
+        int[] arr = {2,3,4,5,6,7,78,4,9};
 
-    k = k % arr.length;
+        rotate(arr, 3);
 
-    reverse(arr, 0, arr.length - 1);
-    reverse(arr, 0, k - 1);
-    reverse(arr, k, arr.length - 1);
-}
-
-public static void reverse(int[] arr, int start, int end){
-    while(start < end){
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-        start++;
-        end--;
+        for(int num : arr) {
+            System.out.print(num + " ");
+        }
     }
 
-    
-}
-public static void main(String[] args) {
-    int[] arr = {3,45,6,77,3,2};
+    public static void reverse(int[] arr,int start ,int end) {
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
 
-    System.out.println(rotate(arr, 7));
-    System.out.println(reverse(arr, 4, 6));
-}
+            start++;
+            end--;
+        }
+    }
+    
+
+    public static void rotate(int[] arr, int k) {
+
+        int n= arr.length;
+        k =     k % n;
+
+        reverse(arr, 0, n-1);
+        reverse(arr, 0, k-1);
+        reverse(arr, k, n-1);
+    }
 }
