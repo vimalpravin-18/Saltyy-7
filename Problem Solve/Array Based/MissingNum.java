@@ -1,22 +1,35 @@
 public class MissingNum {
-    public static int findMissing(int[] arr){
+    public static void main(String[] args) {
 
-    int n = arr.length + 1;
+        int [] arr ={1,2,4,5};
+        int  n = 5;
 
-    int totalSum = n * (n + 1) / 2;
+        // int n = arr.length + 1; // Total number of elements including the missing one
+        // int sum = n * (n + 1) / 2; // Sum of first n natural numbers
 
-    int arrSum = 0;
+        // int arrSum = 0;
+        // for(int num : arr) {    
+        //     arrSum += num;
+        // }
+        // System.out.println("Missing Number: " + (sum - arrSum));
 
-    for(int num : arr){
-        arrSum += num;
+        // --------------------------------------------
+
+
+        // Using XOR method 
+
+        int xor1 = 0;
+        for(int i=0; i<=n; i++) {
+            xor1 ^= i;
+        }
+
+        int xor2 = 0;
+        for(int num : arr) {
+            xor2 ^= num;
+        }
+
+        int missing = xor1 ^ xor2;
+        System.out.println("Missing Number: " + missing);
+
     }
-
-    return totalSum - arrSum;
-}
-
-public static void main(String[] args) {
-    int[] arr = {2,3,4,5,6,7,8};
-
-    System.out.println(findMissing(arr));
-}
 }
