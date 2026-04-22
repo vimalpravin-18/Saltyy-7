@@ -1,0 +1,30 @@
+Message Sender ( FRONTEND & BACKEND )
+
+OVERVIEW
+
+* This is a simple full stack application that demonstrates how a frontend communicates with a backend.
+* The user enters a message in the UI, the frontend sends it to the backend using an API request, and the backend processes it and sends a response back, which is displayed on the screen.
+
+TECH STACK
+
+Frontend: HTML, JavaScript
+Backend: Node.js, Express
+Other : cors
+
+WHAT I LEARNED 
+
+* How frontend sends HTTP requests to backend using fetch()
+* How backend receives data using req.body
+* How backend sends response using res.json()
+* Understanding the request and response cycle
+* Basics of REST API (POST method)
+* Handling CORS issues for frontend and backend communication
+* Importance of separating frontend and backend logic
+* Debugging common errors like CORS, wrong routes, and fetch failures
+
+EXPLANATION
+
+* This project helped me understand the core concept of full stack development.
+When a user enters a message and clicks send, the frontend sends a POST request to the backend. The backend receives the data, processes it, and returns a response. The frontend then displays this response to the user.
+
+* This flow represents the basic working of real-world web applications
