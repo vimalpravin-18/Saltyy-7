@@ -1,28 +1,49 @@
-import java.util.Scanner;
-
 public class NumberPyramid {
     public static void main(String[] args) {
-        Scanner sc = new  Scanner(System.in);
-        System.out.println("Enter the number : ");
-        int n = sc.nextInt();
+        int n=5;
+        
+        for(int i=1; i<=n; i++) {
 
-        for(int i=1; i<n; i++) {
-
-            for(int space=1; space<n-i;  space++) {
-                System.out.print("  ");
+            for(int sp=1; sp<=n-i; sp++) {
+                System.out.print(" ");
             }
 
-            int num = 1;
-            for(int j=1; j<=i; j++) {
-                System.out.print(num+"   ");
-                num++;
+            for(int j=1; j<=i; j++){
+                System.out.print(j);
+            }
+
+            for(int j=i-1; j>=1; j--) {
+                System.out.print(j);
             }
             System.out.println();
         }
-    }
+        
+
+//      1 
+//     121
+//    12321
+//   1234321
+//  123454321
+
+ 
+            // Reverse Pyramid
+
+        for(int i=n; i>=1; i--) {
+
+            for(int sp=1; sp<=n-i; sp++) {
+                System.out.print( " ");
+            }
+
+            for(int j=1; j<=i; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }   
 }
 
-//             1
-//         1       2
-//      1       2       3
-//  1       2       3       4
+// 12345
+//  1234
+//   123
+//    12
+//     1
